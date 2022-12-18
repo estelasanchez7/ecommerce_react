@@ -2,7 +2,6 @@ import React from "react";
 import Clips from "./utils/Clips";
 import SocialLinks from "./utils/SocialLinks";
 
-
 const Hero = ({
   heroapi: { title, subtitle, btntext, img, sociallinks, videos },
 }) => {
@@ -31,12 +30,11 @@ const Hero = ({
                 <Clips key={i} imgsrc={val.imgsrc} clip={val.clip} />
               ))}
             </div>
-            <div className="grid items-center absolute top-[33vh] lg:top[27vh] right-0 gap-3">{sociallinks?.map((val,i)=>(
-              <SocialLinks
-              key={i}
-              icon={val.icon}
-              />
-            ))}</div>
+            <div className="grid items-center absolute top-[33vh] lg:top[27vh] right-0 gap-3">
+              {sociallinks?.map((val, i) => (
+                <SocialLinks key={i} icon={val.icon} />
+              ))}
+            </div>
           </div>
 
           <div>
