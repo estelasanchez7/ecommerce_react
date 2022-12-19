@@ -80,3 +80,10 @@ npm install @heroicons/react
  npm install @splidejs/splide
 
 
+### Lodash
+
+npm i --save lodash
+
+Lodash is a modern JavaScript utility library delivering modularity, performance & extras.
+
+In this project it will be used for: _.truncate([string=''], [options={}])
