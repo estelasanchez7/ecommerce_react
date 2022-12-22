@@ -87,3 +87,13 @@ npm i --save lodash
 Lodash is a modern JavaScript utility library delivering modularity, performance & extras.
 
 In this project it will be used for: _.truncate([string=''], [options={}])
+
+# Redux React-Redux
+
+npm install redux react-redux
+
+# Redux-Toolkit
+
+npm install @reduxjs/toolkit
+
+The Redux Toolkit package is intended to be the standard way to write Redux logic.

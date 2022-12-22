@@ -2,8 +2,17 @@ import React from 'react'
 import CartCount from './cart/CartCount'
 import CartEmpty from './cart/CartEmpty'
 import CartItem from './cart/CartItem'
+import { useDispatch } from 'react-redux'
+import {setCloseCart} from "../app/CartSlice.js"
 
 const Cart = () => {
+  const dispatch = useDispatch();
+
+  const onCartToggle = () => {
+    dispatch(setCloseCart({
+      cartSate:false
+    }))
+  };
   return (
     <>
     <div className={`fixed top-0 left-0 right-0 bottom-0 blur-effect-theme w-full h-screen opacity-100 z-[250]`}>
