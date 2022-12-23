@@ -88,12 +88,21 @@ Lodash is a modern JavaScript utility library delivering modularity, performance
 
 In this project it will be used for: _.truncate([string=''], [options={}])
 
-# Redux React-Redux
+
+### Redux React-Redux
 
 npm install redux react-redux
 
-# Redux-Toolkit
+
+### Redux-Toolkit
 
 npm install @reduxjs/toolkit
 
 The Redux Toolkit package is intended to be the standard way to write Redux logic.
+
+
+### React Hot Toast
+
+npm install react-hot-toast
+
+Add beautiful notifications to your React app
