@@ -1,21 +1,28 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-    cartState: false
+    cartState: false,
+    cartItems: [], // Let suppose database
 }
 
 const CartSlice = createSlice({
-    name: "cart",
     initialState,
+    name: "cart",
     reducers: {
         setOpenCart: (state, action) => {
-            state.cartState = action.payload.cartState
-        },
-        setCloseCart: (state, action) => {
-            state.cartState = action.payload.cartState
+            state.cartState = action.payload.cartState;
+          },
+          setCloseCart: (state, action) => {
+            state.cartState = action.payload.cartState;
+          },
+        setAddItemToCart: (state, action) => {
+            state.cartItems.push(action.payload)
         }
     }
 })
 
-export const { setOpenCart,setCloseCart } = CartSlice.actions
+export const { setOpenCart, setCloseCart, setAddItemToCart } = CartSlice.actions
+
+export const selectCartState = (state) => state.cart.cartState
+
 export default CartSlice.reducer
