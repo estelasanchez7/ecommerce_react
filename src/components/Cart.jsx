@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   selectCartItems,
   selectCartState,
+  setClearCartItems,
   setCloseCart,
 } from "../app/CartSlice.js";
 import CartCount from "./cart/CartCount";
@@ -24,6 +25,10 @@ const Cart = () => {
     );
   };
 
+  const onClearCartItems =()=>{
+    dispatch(setClearCartItems())
+  }
+
   return (
     <>
       <div
@@ -40,7 +45,7 @@ const Cart = () => {
               : "opacity-0 invisible translate-x-8"
           }`}
         >
-          <CartCount onCartToggle={onCartToggle} />
+          <CartCount onCartToggle={onCartToggle} onClearCartItems={onClearCartItems} />
           {cartItems?.length === 0 ? (
             <CartEmpty />
           ) : (

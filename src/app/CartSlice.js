@@ -51,12 +51,37 @@ const CartSlice = createSlice({
     },
 
     setIncreaseItemQTY: (state, action) => {
+      const itemIndex = state.cartItems.findIndex(
+        (item) => item.id === action.payload.id
+      );
 
+      if (itemIndex >= 0) {
+        state.cartItems[itemIndex].cartQuantity += 1;
+
+        toast.success(`Item QTY Increased`);
+      }
+      localStorage.setItem("cart", JSON.stringify(state.cartItems));
     },
 
-    setDecreaseItemQTY: (state, action) => {},
+    setDecreaseItemQTY: (state, action) => {
+      const itemIndex = state.cartItems.findIndex(
+        (item) => item.id === action.payload.id
+      );
 
-    setClearCartItems:(state, action)=>{}
+      if (state.cartItems[itemIndex].cartQuantity > 1) {
+        state.cartItems[itemIndex].cartQuantity -= 1;
+
+        toast.success(`Item QTY Decreased`);
+      }
+      localStorage.setItem("cart", JSON.stringify(state.cartItems));
+    },
+
+    setClearCartItems:(state, action)=>{
+      state.cartItems=[]
+      toast.success(`Cart Cleared`)
+
+      localStorage.setItem("cart", JSON.stringify(state.cartItems));
+    }
 
   },
 });
@@ -66,6 +91,9 @@ export const {
   setCloseCart,
   setAddItemToCart,
   setRemoveItemFromCart,
+  setIncreaseItemQTY,
+  setDecreaseItemQTY,
+  setClearCartItems,
 } = CartSlice.actions;
 
 export const selectCartState = (state) => state.cart.cartState;
