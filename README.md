@@ -72,17 +72,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Icons
 
-npm install @heroicons/react
+### `npm install @heroicons/react`
 
 
 ### Slider
 
- npm install @splidejs/splide
+### `npm install @splidejs/splide`
 
 
 ### Lodash
 
-npm i --save lodash
+### `npm i --save lodash`
 
 Lodash is a modern JavaScript utility library delivering modularity, performance & extras.
 
@@ -91,18 +91,18 @@ In this project it will be used for: _.truncate([string=''], [options={}])
 
 ### Redux React-Redux
 
-npm install redux react-redux
+### `npm install redux react-redux`
 
 
 ### Redux-Toolkit
 
-npm install @reduxjs/toolkit
+### `npm install @reduxjs/toolkit`
 
 The Redux Toolkit package is intended to be the standard way to write Redux logic.
 
 
 ### React Hot Toast
 
-npm install react-hot-toast
+### `npm install react-hot-toast`
 
 Add beautiful notifications to your React app
