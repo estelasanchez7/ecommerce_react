@@ -1,3 +1,9 @@
+# Nike Store Commerce Web Application
+
+This project is developed by Estela Sánchez.
+
+Is the home page of a nike ecommerce. Includes a shopping cart, among other elements.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
